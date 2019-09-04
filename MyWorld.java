@@ -1,5 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+//Nikolas P
+
 /**
  * Write a description of class MyWorld here.
  * 
