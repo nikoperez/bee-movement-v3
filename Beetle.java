@@ -41,19 +41,21 @@ public class Beetle extends Actor
             
         //}
         
-        boolean contactflower = isTouching(flower.class);
+        boolean contactflower = isTouching(Flower.class);
         //System.out.println(contactflower);
         if(contactflower) {
-            removeTouching(flower.class);
-            score--;
-            
+            Flower plant = (Flower) getOneIntersectingObject(Flower.class);
+             int plantScore = plant.getScore();
+             score = score - plantScore;
+             removeTouching(Flower.class);
         }
         boolean contactCactus = isTouching(Cactus.class);
         //System.out.println(contactflower);
         if(contactCactus) {
-            removeTouching(Cactus.class);
-            score++;
-            
+            Cactus plant = (Cactus) getOneIntersectingObject(Cactus.class);
+             int plantScore = plant.getScore();
+             score = score + plantScore;
+             removeTouching(Cactus.class);
         }
     }    
 }

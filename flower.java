@@ -1,24 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class flower here.
+ * Write a description of class Flower here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class flower extends Actor
+public abstract class Flower extends Actor
 {
-    /**
-     * Act - do whatever the flower wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
+    public abstract int getScore(); 
+    
+    
+    
+    
     public void act() 
     {
         // Add your action code here.
-        boolean contactBeetle = isTouching(Beetle.class);
-        if(contactBeetle) {
-            removeTouching(Beetle.class);
-            
-        }
     }    
 }

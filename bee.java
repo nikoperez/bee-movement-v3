@@ -8,9 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class bee extends Actor
 {
+ 
     private int score = 0;
-    
-    
     
     /**
      * Act - do whatever the bee wants to do. This method is called whenever
@@ -18,40 +17,40 @@ public class bee extends Actor
      */
     public void act() 
     {
-        turn(Greenfoot.getRandomNumber(20) - 10);
-        move(3);
+        turn(Greenfoot.getRandomNumber(10) - 5);
+        move(5);
         int x = getX();
         int y = getY();
-        
-        if (x > 600 || y < 0 || y > 400){
+        if(x > 600 || y < 0 || y > 400) {
             x = 0;
             y = Greenfoot.getRandomNumber(400);
-            setLocation(x,y);
             setRotation(0);
-            
-            
+            setLocation(x, y);
         }
-        //Check if we hit a flower
         
-        boolean contactflower = isTouching(flower.class);
-        //System.out.println(contactflower);
+        
+        //Check If We Hit A Flower
+        boolean contactflower = isTouching(Flower.class);
+        //System.out.println(contactFlower);
         if(contactflower) {
-            removeTouching(flower.class);
-            score++;
-            
+             Flower plant = (Flower) getOneIntersectingObject(Flower.class);
+             int plantScore = plant.getScore();
+             score = plantScore + score;
+             removeTouching(Flower.class);
         }
+        
+        //Check If We Hit A Flower
         boolean contactCactus = isTouching(Cactus.class);
-        //System.out.println(contactflower);
+        //System.out.println(contactFlower);
         if(contactCactus) {
-            removeTouching(Cactus.class);
-            score--;
-            
+             Cactus plant = (Cactus) getOneIntersectingObject(Cactus.class);
+             int plantScore = plant.getScore();
+             score = score - plantScore;
+             removeTouching(Cactus.class);
         }
         
         
         
         
-        
-     
-    }      
+    }    
 }

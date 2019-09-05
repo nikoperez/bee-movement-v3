@@ -6,8 +6,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Flower1 extends flower
+public class Flower1 extends Flower
 {
+    private int pointValue = 1;
+    
+    public int getScore() {
+        return pointValue;
+        
+    }
+    
     /**
      * Act - do whatever the Flower1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

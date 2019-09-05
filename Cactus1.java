@@ -8,12 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Cactus1 extends Cactus
 {
-    private int pointValue = 5;
+    private int pointValue = 1;
     
-    public int getPoints() {
+    public int getScore() {
         return pointValue;
+        
     }
-   
     
     /**
      * Act - do whatever the Cactus1 wants to do. This method is called whenever
