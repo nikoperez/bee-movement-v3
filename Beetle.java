@@ -57,5 +57,20 @@ public class Beetle extends Actor
              score = score + plantScore;
              removeTouching(Cactus.class);
         }
+        
+        //beetle wins 
+        if(score >= 10) {
+            BeetleWin winScreen = new BeetleWin();
+            Greenfoot.setWorld(winScreen);
+        }
+        // bee gets negative ladybug wins
+        if(score <= -10) {
+            BeeWin winScreen = new BeeWin();
+            Greenfoot.setWorld(winScreen);
+        }
+        
+        
+        
+        
     }    
 }

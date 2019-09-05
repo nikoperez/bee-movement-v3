@@ -49,7 +49,18 @@ public class bee extends Actor
              removeTouching(Cactus.class);
         }
         
-        
+        //bee wins 
+        if(score >= 10) {
+            BeeWin winScreen = new BeeWin();
+            Greenfoot.setWorld(winScreen);
+        }
+        // bee gets negative ladybug wins
+        if(score <= -10) {
+            BeetleWin winScreen = new BeetleWin();
+            Greenfoot.setWorld(winScreen);
+        }
+
+
         
         
     }    
