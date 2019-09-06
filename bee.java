@@ -60,8 +60,5 @@ public class bee extends Actor
             Greenfoot.setWorld(winScreen);
         }
 
-
-        
-        
     }    
 }
