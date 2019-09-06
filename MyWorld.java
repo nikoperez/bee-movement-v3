@@ -30,29 +30,33 @@
             //Flowers
         for(int i = 0; i < 10; i++) {
             Flower Flower1 = new Flower1();
-            addObject(Flower1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));            
-        }
-        for(int i = 0; i < 10; i++) {
+            addObject(Flower1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+            
             Flower Flower2 = new Flower2();
-            addObject(Flower2, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));            
-        }
-        for(int i = 0; i < 10; i++) {
+            addObject(Flower2, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+            
             Flower Flower3 = new Flower3();
-            addObject(Flower3, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));            
+            addObject(Flower3, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400)); 
         }
         
             //Cactus
         for(int i = 0; i < 10; i++) {
             Cactus Cactus1 = new Cactus1();
-            addObject(Cactus1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));            
-        }
-        for(int i = 0; i < 10; i++) {
+            addObject(Cactus1, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+            
             Cactus Cactus2 = new Mushroom();
-            addObject(Cactus2, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));            
-        }
-        for(int i = 0; i < 10; i++) {
+            addObject(Cactus2, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
+            
             Cactus Cactus3 = new Potato();
-            addObject(Cactus3, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));            
+            addObject(Cactus3, Greenfoot.getRandomNumber(600), Greenfoot.getRandomNumber(400));
         }
+        
+    }
+    
+        public void act() {
+            if( numberOfObjects() == 2){
+            Tie TieScreen = new Tie();
+            Greenfoot.setWorld(TieScreen);
+            }
     }
 }

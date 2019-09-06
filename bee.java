@@ -50,12 +50,12 @@ public class bee extends Actor
         }
         
         //bee wins 
-        if(score >= 10) {
+        if(score >= 20) {
             BeeWin winScreen = new BeeWin();
             Greenfoot.setWorld(winScreen);
         }
         // bee gets negative ladybug wins
-        if(score <= -10) {
+        if(score <= -20) {
             BeetleWin winScreen = new BeetleWin();
             Greenfoot.setWorld(winScreen);
         }
